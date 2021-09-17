@@ -15,6 +15,9 @@ public class Time {
     }
 
     public void setQuantidadeJogadores(Integer quantidadeJogadores) {
+        if (jogador == null) {
+            throw new NullPointerException("Quantidade de Jogadores do Time é obrigatório");
+        }
         this.quantidadeJogadores = quantidadeJogadores;
     }
 
@@ -47,4 +50,5 @@ public class Time {
         }
         this.jogo = jogo;
     }
+
 }

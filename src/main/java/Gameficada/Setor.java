@@ -14,6 +14,8 @@ public class Setor {
         return nome;
     }
 
+
+
     public void setNome(String nome) {
         if (nome == null) {
             throw new NullPointerException("Nome é obrigatório");
@@ -44,7 +46,15 @@ public class Setor {
     }
 
     public MembroAdministrador getMembroAdministrador() {
-        return membroAdministrador;
+
+        return this.membroAdministrador;
+    }
+
+    public String getNomeMembroAdministrador() {
+        if (this.membroAdministrador == null) {
+            return "Setor sem membro administrador";
+        }
+        return this.membroAdministrador.getNome();
     }
 
     public void setMembroAdministrador(MembroAdministrador membroAdministrador) {
@@ -53,4 +63,6 @@ public class Setor {
         }
         this.membroAdministrador = membroAdministrador;
     }
+
+
 }

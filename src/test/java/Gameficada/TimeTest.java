@@ -19,4 +19,16 @@ class TimeTest {
         assertEquals(null, time.getQuantidadeJogadores());
     }
 
+    @Test
+    void deveRetornarExcecaoQuantidadeJogadoresNula() {
+        try {
+            Time time = new Time();
+            time.setQuantidadeJogadores(null);
+            fail();
+        }
+        catch (NullPointerException e) {
+            assertEquals("Quantidade de Jogadores do Time é obrigatório", e.getMessage());
+        }
+    }
+
 }
