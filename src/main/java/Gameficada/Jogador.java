@@ -22,10 +22,14 @@ public class Jogador extends  Aluno{
     }
 
     public void setTime(Time time) {
-        if (time == null) {
-            throw new NullPointerException("Time é obrigatório");
-        }
         this.time = time;
+    }
+
+    public String getNomeTime() {
+        if (this.time == null) {
+            return "jogador sem time";
+        }
+        return this.time.getNome();
     }
 
     public Aluno getAluno() {

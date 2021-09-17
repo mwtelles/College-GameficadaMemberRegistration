@@ -10,6 +10,20 @@ public class Time {
 
     private Jogo jogo;
 
+    private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Time(String nome) {
+        this.nome = nome;
+    }
+
     public Integer getQuantidadeJogadores() {
         return quantidadeJogadores;
     }

@@ -23,4 +23,21 @@ class JogadorTest {
         assertEquals(null, jogador.getAluno());
 
     }
+
+    @Test
+    void deveRetornarJogadorSemTime() {
+        Jogador jogador = new Jogador();
+        jogador.setTime(null);
+        assertEquals("jogador sem time", jogador.getNomeTime());
+
+    }
+
+    @Test
+    void deveRetornarJogadorComTime() {
+        Jogador jogador = new Jogador();
+        Time time = new Time("Time de Counter Strike");
+        jogador.setTime(time);
+        assertEquals("Time de Counter Strike", time.getNome());
+
+    }
 }
