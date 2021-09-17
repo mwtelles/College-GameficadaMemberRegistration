@@ -17,6 +17,9 @@ public class Jogo {
     }
 
     public void setModalidade(String modalidade) {
+        if (modalidade == null) {
+            throw new NullPointerException("Modalidade é obrigatório");
+        }
         this.modalidade = modalidade;
     }
 
@@ -25,6 +28,9 @@ public class Jogo {
     }
 
     public void setTipo(String tipo) {
+        if (tipo == null) {
+            throw new NullPointerException("Tipo é obrigatório");
+        }
         this.tipo = tipo;
     }
 
@@ -33,6 +39,9 @@ public class Jogo {
     }
 
     public void setDispositivo(String dispositivo) {
+        if (dispositivo == null) {
+            throw new NullPointerException("Dispositivo é obrigatório");
+        }
         this.dispositivo = dispositivo;
     }
 
@@ -41,6 +50,9 @@ public class Jogo {
     }
 
     public void setSetor(Setor setor) {
+        if (setor == null) {
+            throw new NullPointerException("Setor é obrigatório");
+        }
         this.setor = setor;
     }
 
@@ -49,6 +61,9 @@ public class Jogo {
     }
 
     public void setTime(Time time) {
+        if (time == null) {
+            throw new NullPointerException("Time é obrigatório");
+        }
         this.time = time;
     }
 }

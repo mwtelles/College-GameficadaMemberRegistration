@@ -4,7 +4,7 @@ public class Time {
 
     private Integer quantidadeJogadores;
 
-    private Boolean titular;
+    private Boolean status;
 
     private Jogador jogador;
 
@@ -18,12 +18,12 @@ public class Time {
         this.quantidadeJogadores = quantidadeJogadores;
     }
 
-    public Boolean getTitular() {
-        return titular;
+    public Boolean getStatus() {
+        return status;
     }
 
-    public void setTitular(Boolean titular) {
-        this.titular = titular;
+    public void setStatus(Boolean titular) {
+        this.status = titular;
     }
 
     public Jogador getJogador() {
@@ -31,6 +31,9 @@ public class Time {
     }
 
     public void setJogador(Jogador jogador) {
+        if (jogador == null) {
+            throw new NullPointerException("Jogador é obrigatório");
+        }
         this.jogador = jogador;
     }
 
@@ -39,6 +42,9 @@ public class Time {
     }
 
     public void setJogo(Jogo jogo) {
+        if (jogo == null) {
+            throw new NullPointerException("Jogo é obrigatório");
+        }
         this.jogo = jogo;
     }
 }

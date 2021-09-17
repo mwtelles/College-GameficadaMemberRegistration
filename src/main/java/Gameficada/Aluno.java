@@ -12,6 +12,9 @@ public class Aluno {
     }
 
     public void setNome(String nome) {
+        if (nome == null) {
+            throw new NullPointerException("Nome é obrigatório");
+        }
         this.nome = nome;
     }
 
@@ -20,6 +23,9 @@ public class Aluno {
     }
 
     public void setMatricula(String matricula) {
+        if (matricula == null) {
+            throw new NullPointerException("Matricula é obrigatório");
+        }
         this.matricula = matricula;
     }
 
@@ -28,6 +34,9 @@ public class Aluno {
     }
 
     public void setCpf(String cpf) {
+        if (cpf == null) {
+            throw new NullPointerException("CPF é obrigatório");
+        }
         this.cpf = cpf;
     }
 
@@ -36,6 +45,9 @@ public class Aluno {
     }
 
     public void setCurso(String curso) {
+        if (curso == null) {
+            throw new NullPointerException("Curso é obrigatório");
+        }
         this.curso = curso;
     }
 }

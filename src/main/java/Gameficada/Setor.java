@@ -15,6 +15,9 @@ public class Setor {
     }
 
     public void setNome(String nome) {
+        if (nome == null) {
+            throw new NullPointerException("Nome é obrigatório");
+        }
         this.nome = nome;
     }
 
@@ -23,6 +26,9 @@ public class Setor {
     }
 
     public void setTipo(String tipo) {
+        if (tipo == null) {
+            throw new NullPointerException("Tipo é obrigatório");
+        }
         this.tipo = tipo;
     }
 
@@ -31,6 +37,9 @@ public class Setor {
     }
 
     public void setModalidade(String modalidade) {
+        if (modalidade == null) {
+            throw new NullPointerException("Modalidade é obrigatório");
+        }
         this.modalidade = modalidade;
     }
 
@@ -39,6 +48,9 @@ public class Setor {
     }
 
     public void setMembroAdministrador(MembroAdministrador membroAdministrador) {
+        if (membroAdministrador == null) {
+            throw new NullPointerException("Membro Administrador é obrigatório");
+        }
         this.membroAdministrador = membroAdministrador;
     }
 }
