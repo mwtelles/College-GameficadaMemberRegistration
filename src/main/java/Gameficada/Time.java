@@ -25,11 +25,12 @@ public class Time {
     }
 
     public Integer getQuantidadeJogadores() {
+
         return quantidadeJogadores;
     }
 
     public void setQuantidadeJogadores(Integer quantidadeJogadores) {
-        if (jogador == null) {
+        if (quantidadeJogadores == null) {
             throw new NullPointerException("Quantidade de Jogadores do Time é obrigatório");
         }
         this.quantidadeJogadores = quantidadeJogadores;
@@ -63,6 +64,18 @@ public class Time {
             throw new NullPointerException("Jogo é obrigatório");
         }
         this.jogo = jogo;
+    }
+
+    public String getNomeJogo() {
+        return this.jogo.getNome();
+    }
+
+    public String getNomeJogador() {
+        return this.jogador.getNome();
+    }
+
+    public String getMatriculaJogador() {
+        return this.jogador.getMatricula();
     }
 
 }
